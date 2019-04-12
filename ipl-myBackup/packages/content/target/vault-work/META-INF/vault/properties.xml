@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>IPL Scorer Content Package</comment>
+<entry key="createdBy">soundaryas</entry>
+<entry key="name">IPL SCORER - Content</entry>
+<entry key="acHandling">merge_preserve</entry>
+<entry key="created">2018-09-05T16:25:01.104+0530</entry>
+<entry key="groupId">com.siriuscom.ipl.packages</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.siriuscom.ipl.packages</entry>
+<entry key="description">Maven Multimodule project for IPL Scorer.</entry>
+<entry key="artifactId">ipl-scorer-content</entry>
+<entry key="path">/etc/packages/com.siriuscom.ipl.packages/IPL SCORER - Content.zip</entry>
+</properties>

@@ -1,0 +1,37 @@
+<html>
+	<head>
+
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+        <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+		<sly data-sly-call="${clientlib.all @ categories='scorecard'}" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+    </head>
+	<body>
+    	<div class="container">
+
+        	<div class="left">
+           	 <p id="batting_team_data">Team    <span id="batting_team_name"></span>  Batting <span id="score"></span> in <span id="overs"></span></p>
+
+            	   <table id="batting_details">
+
+                    </table>
+                 </div>
+                 <div class="right">
+					<p id="bowling_team_data">Team <span id="bowling_team_name"></span> Bowling  </p>
+                  	  <table id="bowling_details">
+
+                    </table>
+                  </div>
+                  <div class="clear-fix">
+                  </div>
+		 </div>
+
+</body>
+
+</html>
+
+

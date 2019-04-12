@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+   
+
+    <filter root="/apps/call-center/config"/>
+    <filter root="/apps/call-center/config.prod"/>
+    <filter root="/apps/call-center/config.publish"/>
+    <filter root="/apps/call-center/config.author"/>
+    <filter root="/apps/call-center/config.qa"/>
+    <filter root="/apps/call-center/config.uat"/>
+
+
+</workspaceFilter>

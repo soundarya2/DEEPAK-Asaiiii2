@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white; }
+
+.clear-fix {
+  clear: both; }
+
+.clear-right {
+  clear: right; }
+
+.clear-left {
+  clear: left; }
+
+body {
+  background-image: url("../img/back-img.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.wrapper {
+  height: 100vh;
+  padding: 20px;
+  background-color: black;
+  opacity: 0.8; }
+
+.score-status, .match-block, .over-stats, .notification-block {
+  width: fit-content; }
+
+.score-status {
+  padding: 5px;
+  background-color: red;
+  color: white;
+  margin: 5px auto;
+  font-size: 18px; }
+
+.match-block {
+  color: #ccc;
+  padding: 5px;
+  font-size: 18px;
+  margin: 0 auto; }
+
+.fixture-block {
+  padding: 5px;
+  margin: 0 auto; }
+  .fixture-block .team1-name {
+    width: calc(50% - 20px);
+    float: left;
+    font-size: 30px;
+    color: #ccc;
+    text-align: right; }
+  .fixture-block .vs {
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+    color: #ccc;
+    float: left; }
+  .fixture-block .team2-name {
+    width: calc(50% - 20px);
+    float: left;
+    color: #ccc;
+    font-size: 30px; }
+
+.scorecard-block {
+  margin-top: 15px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  color: #ccc;
+  padding: 10px 20px; }
+  .scorecard-block .player-name {
+    margin-right: 20px; }
+  .scorecard-block .team1 {
+    float: left;
+    width: calc(50% - 20px); }
+    .scorecard-block .team1 .score-block {
+      float: right; }
+      .scorecard-block .team1 .score-block .run-block {
+        float: right; }
+      .scorecard-block .team1 .score-block .over-block {
+        float: right; }
+    .scorecard-block .team1 .player-block {
+      float: left; }
+  .scorecard-block .team2 {
+    float: right;
+    width: calc(50% - 20px); }
+    .scorecard-block .team2 .score-block {
+      float: left; }
+      .scorecard-block .team2 .score-block .run-block {
+        float: left; }
+      .scorecard-block .team2 .score-block .over-block {
+        float: left; }
+    .scorecard-block .team2 .player-block {
+      float: right; }
+  .scorecard-block .player-block {
+    font-size: 18px;
+    color: white; }
+  .scorecard-block .run-block {
+    font-size: 60px; }
+  .scorecard-block .over-block {
+    font-size: 25px; }
+  .scorecard-block .player-block {
+    padding: 30px 0; }
+
+.over-stats {
+  margin: 20px auto;
+  max-width: 80%; }
+  .over-stats .over-count {
+    text-align: center;
+    font-size: 20px; }
+  .over-stats .runs-scored {
+    margin: 10px 0; }
+    .over-stats .runs-scored .ball {
+      text-align: center;
+      padding: 18px 0;
+      width: 60px;
+      height: 60px;
+      list-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      display: inline-block;
+      margin: 5px 5px;
+      border: 1px solid;
+      border-radius: 50%;
+      vertical-align: middle; }
+    .over-stats .runs-scored .wicket {
+      background-color: red !important; }
+      .over-stats .runs-scored .wicket.extra {
+        padding: 12px 0;
+        font-size: 15px;
+        font-weight: normal; }
+    .over-stats .runs-scored .six {
+      background: goldenrod; }
+    .over-stats .runs-scored .four {
+      background: royalblue; }
+    .over-stats .runs-scored .extra {
+      background: green; }
+
+.notification-block {
+  margin: 0 auto;
+  font-size: 20px; }
+
+button {
+  display: block; }
+  button.link {
+    padding: 5px 15px;
+    background-color: royalblue;
+    color: white;
+    margin: 30px auto;
+    font-size: 18px; }
+
+/*# sourceMappingURL=liveScoreStyles.css.map */

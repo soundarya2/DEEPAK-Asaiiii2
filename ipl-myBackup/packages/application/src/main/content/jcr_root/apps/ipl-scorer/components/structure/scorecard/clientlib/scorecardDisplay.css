@@ -1,0 +1,82 @@
+.container
+{
+	box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+    margin-top:50px;
+
+}
+.left
+{
+    position:relative;
+    float:left;
+    width:45%;
+    left:30px;
+
+}
+
+.right
+{
+    position:relative;
+    float:right;
+    width:45%;
+    right:30px;
+}
+
+.clear-fix
+{
+    clear:both;
+}
+
+
+
+#batting_team_data,#bowling_team_data
+{
+    font-weight:bold;
+    color:#3c3c40;
+}
+
+#batting_team_name,#bowling_team_name
+{
+   color:#f8cb36;
+   text-transform:uppercase;
+    text-shadow: 1px 1px
+
+}
+td
+{
+	background-color:#3c3c40;
+    color:white;
+	text-align:center;
+}
+
+th, td {
+border-bottom: 0.5px solid #D3D3D3;
+    box-shadow: 2px 5px #888888;
+}
+
+/*
+#bowling_details tbody 
+{
+    background-color:#F8CB36;  !important
+}*/
+
+#bowling_details tbody tr.odd:first-child td
+{
+background-color:#F8CB36  !important;
+}
+
+
+#score,#overs
+{
+   font-size:20px; 
+   color:#F8CB36;
+}
+
+
+
+body
+{
+   background-color:#3c3c340;
+}
+

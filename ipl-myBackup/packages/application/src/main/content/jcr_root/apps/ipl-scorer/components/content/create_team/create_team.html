@@ -1,0 +1,41 @@
+ <html>
+	<head>
+		<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+        <sly data-sly-call="${clientlib.all @ categories='ipl-scorer-lib'}" />
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+		<script>
+
+	  </script>
+    </head>
+    <body>
+    	<sly data-sly-use.test="com.siriuscom.ipl_scorer.bundle.dataproviders.TestClass" />
+    	<h1>${test.testString}</h1>
+    	
+        <div id = "create-team-component">
+            <div id = "component-container">
+                <h3 class = "center">CREATE TEAM</h3>
+    
+                <div class = "center" id = "team-name-div">
+                    <label for = "team-name">Team name :</label>
+                    <input type = "text" placeholder = "Enter team Name" id = "team-name"></input>
+                </div>
+    
+                <div class="ui-widget center">
+                    <label for="employees">Select Player : </label>
+                    <input id="employees">
+                </div>
+    
+                <div id = "players-list-container">
+                    <h4>Choosed Players</h4>
+                    <ul id = "players-list"></ul>
+                </div>
+                <button id = "create-team-button">Create Team</button>
+			</div>
+            <p id = "acknowledgement"></p>
+        </div>
+    </body>
+</html>
+

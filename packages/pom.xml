@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.siriuscom.ipl</groupId>
+    <artifactId>ipl-scorer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>packages</artifactId>
+  <packaging>pom</packaging>
+  <name>Packages</name>
+  <groupId>com.siriuscom.ipl.packages</groupId>
+  <profiles>
+    <profile>
+      <id>includeContent</id>
+
+      <modules>
+        <module>content</module>
+      </modules>
+    </profile>
+  </profiles>
+  
+  <modules>
+  	
+  	<module>application</module>
+
+  	<module>conf</module>
+  </modules>
+</project>

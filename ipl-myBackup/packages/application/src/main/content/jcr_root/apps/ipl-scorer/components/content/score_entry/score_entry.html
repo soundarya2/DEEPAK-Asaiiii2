@@ -1,0 +1,262 @@
+ <html>
+	<head>
+		<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+        <sly data-sly-call="${clientlib.all @ categories='ipl-scorer-score-entry-lib'}" />
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+		<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+    	
+        <div id = "score-entry-component">
+            <div id = "component-container">
+                <h3 class = "center">SCORE ENTRY</h3>
+                
+    			<!-- START : Score card div -->
+    			<div class = "score-card">
+    				
+    				<h3 class = "playing-teams yellow center"><span id = "team-one"></span>Vs<span id = "team-two"></span></h3>
+    				<h4 class = "yellow center"><span id = "current-innings"></span>innings</h4>
+    				<!-- START : Total Score -->
+    				<div class = "center total-score">
+    					<h2></h2>
+    					<h3 class = "yellow">(batting)</h3>
+    					<h1></h1>
+    				</div>
+    				<!-- END : Total Score -->
+    				
+    				<!-- START : Over Details -->
+    				<div class = over-details>
+    					<!-- START : Bowling Team -->
+    					<div class = "left-float bowling-team-container">
+    						<h2 class = "bowling-team">The Dragon Stone</h2>
+    						<h3 class = "yellow">(bowling)</h3>
+    					</div>
+    					<!-- END : Bowling Team -->
+    					<!-- START : Overs -->
+    					<div class = "left-float overs">
+    						<h3>OVERS</h3>
+    						<h1></h1>
+    					</div>
+    					<!-- END : Overs -->
+    					
+    					<!-- START : Extras -->
+    					<div class = "left-float extras">
+    						<h3>EXTRAS</h3>
+    						<h1></h1>
+    					</div>
+    					<!-- END : Extras --> 	
+    					<div class = "clear-fix"></div>				    					
+    				</div>
+    				<!-- END : Over Details -->
+    				
+    				<!-- START : Batsman details -->
+    				<div class = "batsman-details">
+	    				<!-- START : choose batsman  Pop up -->
+		                <div id="choose-batsman-popup" class="popup">
+		                	
+			               	<div class="popup-content">
+							    <div class="popup-header">
+							      <h2>Select Batsman </h2>
+							    </div>
+							    <div class="popup-body">
+							      
+							      <!-- START: Choose current batsman -->
+							      <div class="ui-widget center">
+				                     <label for="current-batsman" class = "yellow">BATSMAN :</label>
+				                     <input id="current-batsman" class = "field">
+				                      <button>OK</button>
+				                  </div>
+				                  <!-- END : Choose current batsman -->
+				  
+							    </div>
+							    <div class="popup-footer">
+							     
+							    </div>
+						  	</div>
+						  	
+					  	</div>
+		                <!-- END : choose batsman Pop-up  -->
+    					<div class = "left-float batsman">
+    						<p>BATSMAN</p>
+    						<h2></h2> <i class="fas fa-exchange-alt" id = "choose-batsman-icon"></i> 
+    					</div>
+    					<div class = "left-float right runs">
+    						<p>RUNS</p>
+    						<h3></h3>
+    					</div>
+    					<div class = "clear-fix"></div>
+    				</div>
+    				<!-- END : Batsman details -->
+    				<!-- START : Bowler details -->
+    				<div class = "bowler-details" >
+    				
+    					<!-- START : choose bowler  Pop up -->
+		                <div id="choose-bowler-popup" class="popup">
+		                	
+			               	<div class="popup-content">
+							    <div class="popup-header">
+							      <h2> Select Bowler </h2>
+							    </div>
+							    <div class="popup-body">
+							      
+							      <!-- START: Choose current batsman -->
+							      <div class="ui-widget center">
+				                     <label for="current-bowler" class = "yellow">BOWLER :</label>
+				                     <input id="current-bowler" class = "field">
+				                      <button>OK</button>
+				                  </div>
+				                  <!-- END : Choose current batsman -->
+				  
+							    </div>
+							    <div class="popup-footer">
+							     
+							    </div>
+						  	</div>
+						  	
+					  	</div>
+		                <!-- END : choose batsman Pop-up  -->
+    					<div class = "left-float bowler">
+    						<p>BOWLER</p>
+    						<h2></h2><i class="fas fa-exchange-alt right"></i>
+    					</div>
+    					<div class = "left-float right this-over">
+    						<p>THIS OVER</p>
+    						<div id = "this-over-container">
+    						</div>
+    					</div>
+    					<div class = "clear-fix"></div>
+    				</div>
+    				<!-- END : Bowler details -->
+    			</div>
+    			<!-- END : Score card div -->
+    			<!-- START : Score Entry  -->
+    			<div class = "score-entry">
+    				<h3 class = "center">ADD SCORE</h3>
+    				<!-- START : Score input -->
+    				<div class = "center">
+	    				<span class = "runs-span"></span>
+	    				<span class = "run-type-span"></span>
+	    				<i class="fas fa-backspace yellow" ></i>
+	    				<button id = "submit-score">OK</button>
+    				</div>
+    				<!-- END : Score input -->
+    				<!-- START : Runs  -->
+    				<div class = "center top-bottom-space run-buttons">
+    					<button value = "0" >0</button>
+    					<button value = "1" >1</button>
+    					<button value = "2" >2</button>
+    					<button value = "3" >3</button>
+    					<button value = "4" >FOUR</button>
+    					<button value = "5" >5</button>
+    					<button value = "6" >6</button>
+    				</div>
+    				<!-- END : Runs -->
+    				<!-- START : Run Type  -->
+    				<div class = "center top-bottom-space run-type-buttons">
+    					<button value = "Wd">WB</button>
+    					<button value = "Db">DB</button>
+    					<button value = "Nb">NB</button>
+    					<button class = "penalty" value = "p">PENALTY</button>
+    					<button class = "wicket" value = "W">OUT</button>
+    				</div>
+    				<!-- END : Runs Type -->
+    				<!-- START : Run Operation  -->
+    				<div class = "center top-bottom-space run-operation">
+    					<button>CLEAR</button>
+    					<button class = "undo">UNDO LAST</button>
+    					<button id="power-play">POWER PLAY</button>
+    				</div>
+    				<!-- END : Runs Operation -->
+    			</div>
+    			<!-- END : Score Entry -->
+    			<!-- START : wicket  Pop up -->
+                <div id="wicket-popup" class="popup">
+                	
+	               	<div class="popup-content">
+					    <div class="popup-header">
+					      <h2>Select Wicket Type</h2>
+					    </div>
+					    <div class="popup-body">
+					      
+					      <!-- START: wicket -->
+					      <div class="wicket-type-select-container center">
+		                     <select id = "wicket-type-select">
+		       
+		                     </select>
+		                     <button>OK</button>
+		                  </div>
+		                  <!-- END :  wicket -->
+		  
+					    </div>
+					    <div class="popup-footer">
+					     
+					    </div>
+				  	</div>
+				  	
+			  	</div>
+                <!-- END : wicket Pop-up  -->
+                <!-- START : Penalty Pop up -->
+                <div id="penalty-popup" class="popup">
+                	
+	               	<div class="popup-content">
+					    <div class="popup-header">
+					      <h2>Select Wicket Type</h2>
+					    </div>
+					    <div class="popup-body">
+					      
+					      <!-- START: wicket -->
+					      <div class="penalty-runs-container center">
+					      	<span>Enter Penalty Runs : </span>
+		                    <input type = "number" id = "penalty-runs"/>
+		                    <button>OK</button>
+		                  </div>
+		                  <!-- END :  wicket -->
+		  
+					    </div>
+					    <div class="popup-footer">
+					     
+					    </div>
+				  	</div>
+				  	
+			  	</div>
+                <!-- END : Penalty Pop-up  -->
+                <!-- START : Powerplay Pop up -->
+                <div id="powerplay-popup" class="popup">
+                	
+	               	<div class="popup-content">
+					    <div class="popup-header">
+					      <h2>Powerplay</h2>
+					    </div>
+					    <div class="popup-body">
+					      
+					      <!-- START: wicket -->
+					      <div class="powerplay-container center">
+					      	<select id = "powerplay-select">
+					      		<option>on</option>
+					      		<option>off</option>
+					      	</select>
+		                    <button>OK</button>
+		                  </div>
+		                  <!-- END :  wicket -->
+		  
+					    </div>
+					    <div class="popup-footer">
+					     
+					    </div>
+				  	</div>
+				  	
+			  	</div>
+                <!-- END : Powerplay Pop-up  -->
+                
+                <div class = "undo-container center">
+                	<button class = "undo">UNDO</button>
+                </div>
+			</div>
+            <p id = "score-entry-acknowledgement"></p>
+        </div>
+    </body>
+</html>
+

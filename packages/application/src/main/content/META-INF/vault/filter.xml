@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ipl-scorer"/>
+
+    <filter root="/apps/sling/servlet/errorhandler"/>
+
+
+    <filter root="/conf/ipl-scorer" mode="merge"/>
+
+
+    <filter root="/etc/clientlibs/ipl-scorer"/>
+
+
+    <filter root="/etc/designs/ipl-scorer">
+        <include pattern="/etc/designs/ipl-scorer/jcr:content"/>
+        <include pattern="/etc/designs/ipl-scorer/jcr:content/clientlibs"/>
+        <include pattern="/etc/designs/ipl-scorer/jcr:content/clientlibs/.*"/>
+
+    </filter>
+
+</workspaceFilter>

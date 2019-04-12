@@ -1,0 +1,14 @@
+{
+  "team1":{
+     "teamName":"Scorchers",
+     "score":"100"
+  },
+  "team2":{
+     "teamName":"Strikers",
+     "score":"200"
+  },
+  "team3":{
+     "teamName":"Hurricanes",
+     "score":"300"
+  }
+}

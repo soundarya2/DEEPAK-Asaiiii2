@@ -1,0 +1,133 @@
+ <html>
+	<head>
+		<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+        <sly data-sly-call="${clientlib.all @ categories='ipl-scorer-create-match-lib'}" />
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+		<script>
+
+	  </script>
+    </head>
+    <body>
+		<!-- START : create match component -->
+        <div id = "create-match-component">
+        	<!-- START : Container -->
+            <div id = "component-container">
+                <h3 class = "center">CREATE MATCH</h3>
+                
+                <!-- START : Toss Pop-up -->
+                <div id="toss-popup" class="popup">
+                
+	               	<div class="popup-content">
+					    <div class="popup-header">
+					      <span class="close">&times;</span>
+					      <h2>Toss Result</h2>
+					    </div>
+					    <div class="popup-body">
+					      <h3><span id = "pop-up-team-one"></span>Vs<span id = "pop-up-team-two"></span></h3>
+					      <!-- START: Toss Winner -->
+					      <div class="ui-widget center field">
+		                     <label for="toss-winner">Toss Winner :</label>
+		                     <input id="toss-winner">
+		                  </div>
+		                  <!-- END : Toss Winner -->
+		                  <!-- START: Choose To -->
+					      <div class="ui-widget center field">
+		                     <label for="choose-to">Choose To :</label>
+		                     <input id="choose-to">
+		                  </div>
+		                  <!-- END : Choose To -->
+					    </div>
+					    <div class="popup-footer">
+					      <button>OK</button>
+					    </div>
+				  	</div>
+				  	
+			  	</div>
+                <!-- END : Toss Pop-up  -->
+                
+                <!-- START : Rules -->
+                <div class="ui-widget center field">
+                     <label for="rules">Select Rules: </label>
+                     <input id="rules">
+                </div>
+                
+                <!-- END : Rules -->
+                <div class="center field">
+                     <label for="overs">Enter Overs: </label>
+                     <input id="overs" type = "number"/>
+                </div>
+                <!-- START : Overs -->
+                
+                <!-- END : Overs -->
+    			
+    			<!-- START : Teams Section  -->
+                <section class = "center" id = "teams-section">
+                	
+                	<!-- START : Team one div -->
+                    <div id = "team-one">
+                    	<h4 class = "center">Team 1</h4>
+                        <div class="ui-widget center field">
+                            <label for="team-one-name">Select Team : </label>
+                            <input id="team-one-name">
+                        </div>
+                        
+                        <!-- START : Team One players list -->
+                        <div class="ui-widget center">
+                            <label for="team-one-players-list">Select Player : </label>
+                            <input id="team-one-players-list">
+                        </div>
+                        <!-- END : Team one players list -->
+                        <h3 class = "center" id = "team-one-title"></h3>
+                        <!-- START : Team one choosed players -->
+                        <div id = "team-one-choosed-players">
+                            <h4>Choosed Players</h4>
+                            <ul id = "team-one-choosed-players-list"></ul>
+                        </div>
+                        <!-- END : Team one choosed players -->
+                    </div>  
+                    <!-- END : Team one -->
+                    <div class= "middle-div">
+	                    <p class = "versus">Vs</p>
+	                    <button id= "toss-button">Toss</button>
+                    </div>
+                    <!-- START : Team two div -->
+                    <div id = "team-two">
+                    	<h4 class = "center">Team 1</h4>
+                        <div class="ui-widget center field">
+                            <label for="team-two-name">Select Team : </label>
+                            <input id="team-two-name">
+                        </div>
+                        
+                        <!-- START : Team two players list -->
+                        <div class="ui-widget center">
+                            <label for="team-two-players-list">Select Player : </label>
+                            <input id="team-two-players-list">
+                        </div>
+                        <!-- END : Team two players list -->
+                        <h3 class = "center" id = "team-two-title"></h3>
+                        <!-- START : Team two choosed players -->
+                        <div id = "team-two-choosed-players">
+                            <h4>Choosed Players</h4>
+                            <ul id = "team-two-choosed-players-list"></ul>
+                        </div>
+                        <!-- END : Team two choosed players -->
+                    </div>  
+                    <!-- END : Team two -->
+                    <div class="clear-fix"></div>
+                </section>
+                <!-- END : Teams Section -->
+    			<h3 id="toss-result"><span id="toss-winner-span"></span> won the toss and choose to <span id = "choose-to-span"></span></h3>
+                <button id = "create-match-button">Create Match</button>
+				
+			</div>
+			<!-- END : Container -->
+            <p id = "acknowledgement"></p>
+            
+        </div>
+        <!-- END : create team component -->
+  	</body>
+</html>
+

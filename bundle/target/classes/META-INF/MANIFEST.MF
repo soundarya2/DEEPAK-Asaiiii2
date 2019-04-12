@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1534400802763
+Build-Jdk: 1.8.0_171
+Built-By: manigandankr
+Bundle-Description: Maven Multimodule project for IPL Scorer.
+Bundle-ManifestVersion: 2
+Bundle-Name: IPL Scorer Bundle
+Bundle-SymbolicName: com.siriuscom.ipl.ipl-scorer
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-3.3.0.201609221906

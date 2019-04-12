@@ -1,0 +1,64 @@
+#create-team-component{
+	margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family: Verdana,Arial,sans-serif;
+}
+
+.center{
+	text-align : center;
+}
+
+#create-team-component{
+    border : 1px solid whitesmoke;
+    background-color: #3c3c40;
+    color : white;
+}
+
+#component-container{
+
+	border : 2px solid #605d65;
+   	border-radius: 25px;
+    margin : 5px;
+
+
+}
+
+#team-name{
+	margin-bottom: 10px;
+    height: 20px;
+    width: 185px;
+}
+
+#team-name-div label{
+	font-size: 1.1em;
+
+}
+
+#players-list-container{
+	margin-left : 10px;
+}
+
+#players-list-container li{
+	margin-left : 10px;
+}
+
+#create-team-button{
+    display : block;
+	margin : 5px auto 5px auto;
+    height : 25px;
+    background-color : #f8cb36;
+    border : none;
+    border-radius : 5px;
+
+}
+
+#create-team-button:focus{
+	outline : none;
+}
+
+.delete-player, label{
+	color : #f8cb36;
+    margin-left : 10px;
+    cursor : pointer;
+}
